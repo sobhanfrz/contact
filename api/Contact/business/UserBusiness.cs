@@ -74,5 +74,25 @@ namespace Contact.business
             };
         }
 
+        public BusinessResult<userprofilemodel>profile(int userid)
+        {
+
+            usertable table =new UserData().getuserinfobyid(userid);
+            string file = @$".\Avatar\{table.username.ToLower()}.jpg";
+            string data=Convert.ToBase64String(File.ReadAllBytes(file));
+
+            return new BusinessResult<userprofilemodel>()
+            {
+                Success = true,
+                Data = new userprofilemodel()
+                {
+                 avatar= data,
+                 username=table.username,
+                 fullname=table.fullname
+                }
+            };
+
+        }
+
     }
 }
