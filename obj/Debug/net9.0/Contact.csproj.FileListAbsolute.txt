@@ -1,0 +1,6 @@
+C:\Users\sobhan\Desktop\Contact\obj\Debug\net9.0\Contact.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sobhan\Desktop\Contact\obj\Debug\net9.0\Contact.AssemblyInfoInputs.cache
+C:\Users\sobhan\Desktop\Contact\obj\Debug\net9.0\Contact.AssemblyInfo.cs
+C:\Users\sobhan\Desktop\Contact\obj\Debug\net9.0\Contact.csproj.CoreCompileInputs.cache
+C:\Users\sobhan\Desktop\Contact\obj\Debug\net9.0\Contact.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sobhan\Desktop\Contact\obj\Debug\net9.0\Contact.sourcelink.json

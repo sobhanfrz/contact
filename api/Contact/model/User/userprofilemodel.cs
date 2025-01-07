@@ -8,9 +8,9 @@ namespace Contact.model.User
 {
     public class userprofilemodel
     {
-        public string username {  get; set; }
-        public string fullname {  get; set; }
+        public string username { get; set; }
+        public string fullname { get; set; }
 
-        public string avatar {  get; set; }
+        public string avatar { get; set; }
     }
 }
