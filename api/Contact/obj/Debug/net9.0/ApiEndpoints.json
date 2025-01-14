@@ -1,8 +1,28 @@
 [
   {
+    "ContainingType": "Contact.controller.ContactController",
+    "Method": "getphonetypes",
+    "RelativePath": "phonetypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Contact.model.BusinessResult\u00601[[System.Collections.Generic.IEnumerable\u00601[[Contact.model.table.phonetypetable, Contact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Contact.controller.UserController",
     "Method": "register",
-    "RelativePath": "add",
+    "RelativePath": "user/add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +48,7 @@
   {
     "ContainingType": "Contact.controller.UserController",
     "Method": "login",
-    "RelativePath": "login",
+    "RelativePath": "user/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -52,29 +72,9 @@
     ]
   },
   {
-    "ContainingType": "Contact.controller.ContactController",
-    "Method": "getphonetypes",
-    "RelativePath": "phonetypes",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "Contact.model.BusinessResult\u00601[[System.Collections.Generic.IEnumerable\u00601[[Contact.model.table.phonetypetable, Contact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "Contact.controller.UserController",
     "Method": "profile",
-    "RelativePath": "profile",
+    "RelativePath": "user/profile",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -88,6 +88,26 @@
     "ReturnTypes": [
       {
         "Type": "Contact.model.BusinessResult\u00601[[Contact.model.User.userprofilemodel, Contact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Contact.controller.UserController",
+    "Method": "getdatetime",
+    "RelativePath": "user/time",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.DateTime",
         "MediaTypes": [
           "text/plain",
           "application/json",

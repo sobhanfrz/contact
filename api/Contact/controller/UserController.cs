@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Contact.controller
 {
     [ApiController]
+    [Route("user")]
     public class UserController
     {
         private UserBusiness business;
@@ -35,6 +36,12 @@ namespace Contact.controller
             return this.business.profileBusiness(userid);
 
         }
+        [HttpGet("time")]
+        public DateTime getdatetime()
+        {
+            return DateTime.Now;
 
+        }
+   
     }
 }

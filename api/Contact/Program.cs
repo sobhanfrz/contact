@@ -56,6 +56,7 @@ namespace Contact
             }
                 
                 );
+            app.UseHttpsRedirection();
 
             app.UseAuthorization();
 

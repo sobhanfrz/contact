@@ -11,16 +11,28 @@
       "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\business\\userbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:business\\userbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\model\\businessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:model\\businessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\model\\user\\useraddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:model\\user\\useraddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\controller\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:controller\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|c:\\users\\sobhan\\desktop\\contact\\api\\contact\\business\\userbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6023C1-DEFF-44EE-B61D-97A87EA4D204}|Contact.csproj|solutionrelative:business\\userbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -40,9 +52,22 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAowEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T09:36:57.437Z"
+              "WhenOpened": "2025-01-05T09:36:57.437Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BusinessResult.cs",
+              "DocumentMoniker": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\model\\BusinessResult.cs",
+              "RelativeDocumentMoniker": "model\\BusinessResult.cs",
+              "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\model\\BusinessResult.cs",
+              "RelativeToolTip": "model\\BusinessResult.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:37:44.969Z"
             },
             {
               "$type": "Document",
@@ -52,31 +77,31 @@
               "RelativeDocumentMoniker": "model\\User\\UserAddModel.cs",
               "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\model\\User\\UserAddModel.cs",
               "RelativeToolTip": "model\\User\\UserAddModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T09:29:44.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "UserBusiness.cs",
               "DocumentMoniker": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\business\\UserBusiness.cs",
               "RelativeDocumentMoniker": "business\\UserBusiness.cs",
               "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\business\\UserBusiness.cs",
               "RelativeToolTip": "business\\UserBusiness.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowE0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T09:05:51.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UserData.cs",
               "DocumentMoniker": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\Data\\UserData.cs",
               "RelativeDocumentMoniker": "Data\\UserData.cs",
               "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\Data\\UserData.cs",
               "RelativeToolTip": "Data\\UserData.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwC4AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAuwA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T08:27:51.776Z"
             },
@@ -88,10 +113,34 @@
               "RelativeDocumentMoniker": "controller\\UserController.cs",
               "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\controller\\UserController.cs",
               "RelativeToolTip": "controller\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T08:17:15.25Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-13T13:37:58.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\controller\\ContactController.cs",
+              "RelativeDocumentMoniker": "controller\\ContactController.cs",
+              "ToolTip": "C:\\Users\\sobhan\\Desktop\\contact\\api\\Contact\\controller\\ContactController.cs",
+              "RelativeToolTip": "controller\\ContactController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T14:03:37.296Z"
             }
           ]
         }
