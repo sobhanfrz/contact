@@ -46,7 +46,7 @@ let request:useraddmodel= {
 username:this.registerform.value.username as string,
 password:this.registerform.value.password as string,
 fullname:this.registerform.value.fullname as string,
-imagedata:this.registerform.value.imagedata as string
+imagedata:this.url
 }
 this.userservice.postRegister(request).subscribe((response)=>
 {
