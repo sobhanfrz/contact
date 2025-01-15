@@ -1,0 +1,12 @@
+<form [formGroup]="registerform" (ngSubmit)="register()">
+    <label>username:</label>
+<input type="text" formControlName="username">
+<label>fullname:</label>
+<input type="text" formControlName="fullname">
+<label>password:</label>
+<input type="password" formControlName="password">
+<label>avatar:</label>
+<input type="file" formControlName="imagedata" (change)="show($event)">
+<img [src]="url">
+<input type="submit" value="register">
+</form>

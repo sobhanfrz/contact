@@ -20,6 +20,7 @@ namespace Contact.business
            
             //convert string to byte 
             byte[] password = MD5.HashData(Encoding.UTF8.GetBytes(model.password));
+
             //converet img to byte
             byte[] avatar = Convert.FromBase64String(model.ImageData);
             if (!Directory.Exists(@".\Avatar"))
@@ -75,7 +76,7 @@ namespace Contact.business
         {
 
             usertable table = new UserData().getuserinfobyid(userid);
-            string file = @$".\Avatar\{table.username.ToLower()}.jpg";
+            string file = @$"C:\Users\sobhan\Desktop\contact\api\Contact\Avatar\{table.username.ToLower()}.jpg";
             string data = Convert.ToBase64String(File.ReadAllBytes(file));
 
             return new BusinessResult<userprofilemodel>()
