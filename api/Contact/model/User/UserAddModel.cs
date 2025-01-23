@@ -9,6 +9,6 @@ namespace Contact.model.User
 
         public string fullname { get; set; }
 
-        public string ImageData { get; set; }
+        public string imagedata { get; set; }
     }
 }

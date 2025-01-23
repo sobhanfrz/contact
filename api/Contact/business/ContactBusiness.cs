@@ -7,14 +7,14 @@ namespace Contact.business
     public class ContactBusiness
     {
         private ContactData data;
-        public ContactBusiness() { 
-        this.data = new ContactData();
+        public ContactBusiness(ContactData contactData) { 
+        this.data = contactData;
         }
         public BusinessResult<IEnumerable<phonetypetable>> getphonetypes()
         {
 BusinessResult<IEnumerable<phonetypetable>> result = new ();
 result.Success = true;
-            result.Data=data.getphonetypes();
+            result.Data=this.data.getphonetypes();
             return result;
 
 

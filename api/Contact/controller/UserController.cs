@@ -10,15 +10,17 @@ namespace Contact.controller
     [Route("user")]
     public class UserController
     {
-        private UserBusiness business;
+        private UserBusiness userbusiness;
 
-        public UserController() { 
-        this.business = new UserBusiness();
+        public UserController(UserBusiness userBusiness) { 
+
+        this.userbusiness =userBusiness;
+
         }
         [HttpPost("login")]
         public BusinessResult<int> login(userloginmodel model)
         {
-            return this.business.loginBussiness(model);
+            return this.userbusiness.loginBussiness(model);
 
         }
         //insert user
@@ -26,14 +28,14 @@ namespace Contact.controller
 
         public BusinessResult<int> register(UserAddModel model)
         {
-            return this.business.RegisterBusiness(model);
+            return this.userbusiness.RegisterBusiness(model);
 
         }
         //user profile
         [HttpGet("profile")]
           public BusinessResult<userprofilemodel> profile(int userid)
         {
-            return this.business.profileBusiness(userid);
+            return this.userbusiness.profileBusiness(userid);
 
         }
         [HttpGet("time")]

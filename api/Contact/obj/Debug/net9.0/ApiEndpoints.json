@@ -2,7 +2,7 @@
   {
     "ContainingType": "Contact.controller.ContactController",
     "Method": "getphonetypes",
-    "RelativePath": "phonetypes",
+    "RelativePath": "contact/phonetypes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

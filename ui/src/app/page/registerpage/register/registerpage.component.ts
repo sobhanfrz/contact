@@ -22,8 +22,6 @@ export class registerPageComponent{
     imagedata:new FormControl('')
 } )
 
-//base64تا اینجا مشکلی که داشتم
-//  این بود که آدرس محلی فایل برمیگردوند نه فرمت 
 show(event:any) {
     let file = event.target.files[0];
 

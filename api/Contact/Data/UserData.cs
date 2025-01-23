@@ -15,12 +15,11 @@ namespace Contact.Data
     {
         private SqlConnection connection;
         private crud crud;
-        public UserData()
+        public UserData(SqlConnection connection ,crud crud)
         {
 
-            string connectionstring = "Data Source=.;Database=contacts;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False";
-            connection = new(connectionstring);
-            crud = new(connection);
+           this.connection = connection;
+            this.crud = crud;
 
         }
 

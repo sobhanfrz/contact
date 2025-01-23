@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 namespace Contact.controller
 {
     [ApiController]
+    [Route("contact")]
     public class ContactController
     {
         private ContactBusiness busssiness;
 
-        public ContactController()
+        public ContactController(ContactBusiness contactBusiness)
         {
 
-            busssiness = new ContactBusiness();
+          busssiness= contactBusiness;
         }
         [HttpGet("phonetypes")]
         public BusinessResult<IEnumerable<phonetypetable>> getphonetypes()

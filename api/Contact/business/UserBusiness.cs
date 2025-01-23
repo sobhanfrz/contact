@@ -14,17 +14,23 @@ namespace Contact.business
 {
     public class UserBusiness
     {
+        private UserData userData;
+        public UserBusiness(UserData userdata) {
+            this.userData = userdata;
+        }
         public BusinessResult<int> RegisterBusiness(UserAddModel model)
         {
+
             BusinessResult<int> result = new();
            
             //convert string to byte 
             byte[] password = MD5.HashData(Encoding.UTF8.GetBytes(model.password));
 
-            model.ImageData = model.ImageData.Replace("data:image/jpeg;base64,", "");
+            model.imagedata = model.imagedata.Replace("data:image/jpeg;base64,", "");
+
 
             //converet img to byte
-            byte[] avatar = Convert.FromBase64String(model.ImageData);
+            byte[] avatar = Convert.FromBase64String(model.imagedata);
             if (!Directory.Exists(@".\Avatar"))
             {
                 Directory.CreateDirectory(@".\Avatar");
@@ -43,9 +49,9 @@ namespace Contact.business
                 username = model.username,
                 password = password,
                 fullname = model.fullname,
-                avatar = model.ImageData
+                avatar = model.imagedata
             };
-            result.Data = new UserData().insert(user);
+            result.Data = this.userData.insert(user);
             result.Success = true;
 
             return result;
@@ -54,7 +60,7 @@ namespace Contact.business
         public BusinessResult<int> loginBussiness(userloginmodel model)
         {
             byte[] password = MD5.HashData(Encoding.UTF8.GetBytes(model.password));
-            int id = new UserData().getuserid(model.username, password);
+            int id = this.userData.getuserid(model.username, password);
 
             if (id == 0)
 
@@ -77,11 +83,18 @@ namespace Contact.business
         public BusinessResult<userprofilemodel> profileBusiness(int userid)
         {
 
-            usertable table = new UserData().getuserinfobyid(userid);
-            string file = @$"C:\Users\sobhan\Desktop\contact\api\Contact\Avatar\{table.username.ToLower()}.jpg";
-            string data = Convert.ToBase64String(File.ReadAllBytes(file));
+            usertable table = this.userData.getuserinfobyid(userid);
+            string file = @$".\Avatar\{table.username.ToLower()}.jpg";
+            string data = "data: image / jpeg; base64,";
 
-            return new BusinessResult<userprofilemodel>()
+            if (File.Exists(file))
+            {
+                data += Convert.ToBase64String(File.ReadAllBytes(file));
+            }
+            
+
+
+             return new BusinessResult<userprofilemodel>()
             {
                 Success = true,
                 Data = new userprofilemodel()
