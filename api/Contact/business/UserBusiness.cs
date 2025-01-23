@@ -44,7 +44,7 @@ namespace Contact.business
 
             File.WriteAllBytes(file, avatar);
 
-            usertable user = new usertable
+            UserTable user = new UserTable
             {
                 username = model.username,
                 password = password,
@@ -57,7 +57,7 @@ namespace Contact.business
             return result;
         }
 
-        public BusinessResult<int> loginBussiness(userloginmodel model)
+        public BusinessResult<int> loginBussiness(UserLoginModel model)
         {
             byte[] password = MD5.HashData(Encoding.UTF8.GetBytes(model.password));
             int id = this.userData.getuserid(model.username, password);
@@ -80,10 +80,10 @@ namespace Contact.business
             };
         }
 
-        public BusinessResult<userprofilemodel> profileBusiness(int userid)
+        public BusinessResult<UserProfilemodel> profileBusiness(int userid)
         {
 
-            usertable table = this.userData.getuserinfobyid(userid);
+            UserTable table = this.userData.getuserinfobyid(userid);
             string file = @$".\Avatar\{table.username.ToLower()}.jpg";
             string data = "data: image / jpeg; base64,";
 
@@ -94,10 +94,10 @@ namespace Contact.business
             
 
 
-             return new BusinessResult<userprofilemodel>()
+             return new BusinessResult<UserProfilemodel>()
             {
                 Success = true,
-                Data = new userprofilemodel()
+                Data = new UserProfilemodel()
                 {
                     avatar = data,
                     username = table.username,

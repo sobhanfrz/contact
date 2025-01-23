@@ -10,9 +10,9 @@ namespace Contact.business
         public ContactBusiness(ContactData contactData) { 
         this.data = contactData;
         }
-        public BusinessResult<IEnumerable<phonetypetable>> getphonetypes()
+        public BusinessResult<IEnumerable<PhonetypeTable>> getphonetypes()
         {
-BusinessResult<IEnumerable<phonetypetable>> result = new ();
+BusinessResult<IEnumerable<PhonetypeTable>> result = new ();
 result.Success = true;
             result.Data=this.data.getphonetypes();
             return result;

@@ -17,7 +17,7 @@ namespace Contact.controller
           busssiness= contactBusiness;
         }
         [HttpGet("phonetypes")]
-        public BusinessResult<IEnumerable<phonetypetable>> getphonetypes()
+        public BusinessResult<IEnumerable<PhonetypeTable>> getphonetypes()
         {
             return busssiness.getphonetypes();
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contact.model.User
 {
-    public class userprofilemodel
+    public class UserProfilemodel
     {
         public string username { get; set; }
         public string fullname { get; set; }

@@ -2,6 +2,7 @@
 using Contact.model;
 using Contact.model.table;
 using Contact.model.User;
+using Contact.Utility;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contact.controller
@@ -18,11 +19,33 @@ namespace Contact.controller
 
         }
         [HttpPost("login")]
-        public BusinessResult<int> login(userloginmodel model)
+        public BusinessResult<string> login(UserLoginModel model)
         {
-            return this.userbusiness.loginBussiness(model);
+            BusinessResult<int> result = this.userbusiness.loginBussiness(model);
+            if (result.Success)
+            {
+                int userid = result.Data;
+                string token = Token.Generate(userid);
 
+                return new()
+                {
+                    Success = true,
+                    Data = token
+                };
+
+            }
+            else
+            {
+                return new()
+                {
+                    Success = false,
+                    Errorcode = result.Errorcode,
+                    ErrorMessage = result.ErrorMessage
+                };
+
+            }
         }
+
         //insert user
         [HttpPost("add")]
 
@@ -33,7 +56,7 @@ namespace Contact.controller
         }
         //user profile
         [HttpGet("profile")]
-          public BusinessResult<userprofilemodel> profile(int userid)
+          public BusinessResult<UserProfilemodel> profile(int userid)
         {
             return this.userbusiness.profileBusiness(userid);
 

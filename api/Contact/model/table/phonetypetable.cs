@@ -1,6 +1,6 @@
 ﻿namespace Contact.model.table
 {
-    public class phonetypetable
+    public class PhonetypeTable
     {
         public byte id {  get; set; }
 

@@ -8,17 +8,17 @@ namespace Contact.Data
     public class ContactData
     {
         private SqlConnection connection;
-        private crud crud;
-        public ContactData(SqlConnection connection ,crud crud)
+        private Crud crud;
+        public ContactData(SqlConnection connection ,Crud crud)
         {
             this.connection = connection;
             this.crud = crud;
 
         }
 
-        public IEnumerable<phonetypetable> getphonetypes()
+        public IEnumerable<PhonetypeTable> getphonetypes()
         {
-            return this.crud.select<phonetypetable>();
+            return this.crud.select<PhonetypeTable>();
 
         }
 

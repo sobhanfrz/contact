@@ -3,6 +3,7 @@ using Contact.Data;
 using Contact.model.table;
 using Contact.model.User;
 using Contact.utility;
+using Contact.Utility;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Identity.Client;
@@ -26,23 +27,19 @@ namespace Contact
             //);
 
 
-            //BusinessResult<int> result = new UserBusiness().loginBussiness(new userloginmodel
+            //BusinessResult<int> result = new UserBusiness().loginBussiness(new UserLoginModel
             //{
             //    username="sami",
             //    password="112288"
             //});
 
-            //BusinessResult<userprofilemodel> result = new UserBusiness().profileBusiness(4014);
+            //BusinessResult<UserProfilemodel> result = new UserBusiness().profileBusiness(4014);
 
-            //usertable table = new usertable();
+            //UserTable table = new UserTable();
             //table.username = "bot@gmail.com";
             //table.fullname = "bt";
 
-            //insert<usertable>(table);
-
-
-            
-
+            //insert<UserTable>(table);
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
@@ -55,7 +52,7 @@ namespace Contact
             }
             
             );
-            builder.Services.AddTransient<crud>();
+            builder.Services.AddTransient<Crud>();
 
             builder.Services.AddTransient<UserBusiness>();
             builder.Services.AddTransient<ContactBusiness>();
@@ -64,7 +61,11 @@ namespace Contact
             builder.Services.AddTransient<UserData>();
             builder.Services.AddTransient<ContactData>();
 
-
+            builder.Services.AddAuthorization();
+            builder.Services.AddAuthentication().AddJwtBearer(x =>
+            {
+                x.TokenValidationParameters = Token.Params;
+            });
 
             var app = builder.Build();
 
@@ -77,7 +78,7 @@ namespace Contact
                 
                 );
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

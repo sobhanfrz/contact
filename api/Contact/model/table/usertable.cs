@@ -1,7 +1,7 @@
 ﻿
 namespace Contact.model.table
 {
-    public class usertable
+    public class UserTable
     {
         public int id { get; set; }
         public string username { get; set; }

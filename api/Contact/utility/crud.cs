@@ -10,11 +10,11 @@ using Microsoft.Data.SqlClient;
 
 namespace Contact.utility
 {
-    public class crud
+    public class Crud
     {
 
         private SqlConnection connection;
-        public crud(SqlConnection connection)
+        public Crud(SqlConnection connection)
         {
             this.connection = connection;
 

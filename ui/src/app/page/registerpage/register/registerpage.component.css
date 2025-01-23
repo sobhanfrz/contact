@@ -3,4 +3,58 @@ input{
     margin: 4px;
     padding: 4px;
     }
-   
+    * {
+        padding: 0;
+        margin: 0;
+        border: none;
+        outline: none;
+        font-family: Dana;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+    :host {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #00BB8C;
+        width: 100%;
+      }
+      form{
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 20px 30px;
+        width: 400px;
+    }
+    input[type="text"],
+input[type="password"]{
+    width: 100%;
+    border: 1px solid #ded9ee;
+    padding: 16px;
+    border-radius: 8px;
+    color: #1b1b1b;
+    display: block;
+    transition: 180ms ease-in border-color;
+}
+input::placeholder{
+    color: grey;
+    font-weight: 300;
+}
+input:focus{
+    border-color: #89888b;
+}
+
+input[type="submit"]{
+    background-color: #2ed573;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+img{
+    display: block;
+    width: 110px;
+    margin: 0 auto;
+}

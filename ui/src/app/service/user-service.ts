@@ -10,7 +10,7 @@ export class userservice{
     constructor(private http:HttpClient){}
 postLogin(request:userloginmodel){
     let url="https://localhost:50879/user/login"
-  return this.http.post<result<number>>(url,request)
+  return this.http.post<result<string>>(url,request)
 }
 postRegister(request:useraddmodel){
   let url="https://localhost:50879/user/add"

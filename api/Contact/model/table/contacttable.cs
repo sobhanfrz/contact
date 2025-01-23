@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contact.model.table
 {
-    internal class contacttable
+    internal class ContactTable
     {
         public int id { get; set; }
 

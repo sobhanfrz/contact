@@ -18,9 +18,7 @@ loginform = new FormGroup({
     password:new FormControl('')
 })
 login()
-{
-    console.log(this.loginform.valid)
-    
+{ 
 let request : userloginmodel = {
 username:this.loginform.value.username as string ,
 password:this.loginform.value.password as string
@@ -31,7 +29,7 @@ password:this.loginform.value.password as string
             
      //تا اینجا
 //چه طوری میشه پسوورد رو برگردوند به حالت اینتجر 
-     sessionStorage.setItem('userid',response.data.toString());
+     sessionStorage.setItem('jwt',response.data);
 this.router.navigate(['profile']);
         }
         else{
