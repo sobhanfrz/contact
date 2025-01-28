@@ -1,7 +1,15 @@
 <form [formGroup]="loginform" (ngSubmit)="login()">
     <label>username:</label>
-<input type="text" formControlName="username">
-<label>password:</label>
-<input type="password" formControlName="password">
-<input type="submit" value="login">
+    <input type="text" formControlName="username">
+    <div *ngIf="loginform.controls['username'].touched && loginform.controls['username'].errors">
+        <small style="color: red;">نام کاربری اجباری است.</small>
+    </div>
+
+    <label>password:</label>
+    <input type="password" formControlName="password">
+    <div *ngIf="loginform.controls['password'].touched && loginform.controls['password'].errors">
+        <small style="color: red;">رمز عبور اجباری است.</small>
+    </div>
+
+    <input type="submit" value="login">
 </form>

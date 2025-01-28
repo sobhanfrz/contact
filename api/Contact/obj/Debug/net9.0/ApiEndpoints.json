@@ -78,13 +78,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userid",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "Contact.model.BusinessResult\u00601[[Contact.model.User.UserProfilemodel, Contact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

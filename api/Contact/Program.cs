@@ -35,11 +35,11 @@ namespace Contact
 
             //BusinessResult<UserProfilemodel> result = new UserBusiness().profileBusiness(4014);
 
-            //UserTable table = new UserTable();
+            //usertable table = new usertable();
             //table.username = "bot@gmail.com";
             //table.fullname = "bt";
 
-            //insert<UserTable>(table);
+            //insert<usertable>(table);
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
@@ -78,7 +78,7 @@ namespace Contact
                 
                 );
             app.UseHttpsRedirection();
-            app.UseAuthentication();
+          //  app.UseAuthentication();
             app.UseAuthorization();
 
 

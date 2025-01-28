@@ -28,7 +28,7 @@ namespace Contact.Data
 
 
 
-        public int insert(UserTable table)
+        public int insert(usertable table)
         {
 
             return crud.insert(table);
@@ -43,39 +43,39 @@ namespace Contact.Data
             return id;
         }
 
-        public UserTable getuserinfobyid(int id)
+        public usertable getuserinfobyid(int id)
         {
             string sql = @"select username,fullname,avatar
 from dbo.[user] 
 where id=@id";
-            UserTable table = connection.QuerySingle<UserTable>(sql, new { id = id });
+            usertable table = connection.QuerySingle<usertable>(sql, new { id = id });
             return table;
         }
 
-        public IEnumerable<UserTable> selectall()
+        public IEnumerable<usertable> selectall()
         {
-            return crud.select<UserTable>();
+            return crud.select<usertable>();
         }
 
         public void update()
         {
 
-            UserTable user = this.crud.getbyid<UserTable>(5012);
+            usertable user = this.crud.getbyid<usertable>(5012);
             user.fullname = "ahmadrezasi";
             user.username = "mi";
             this.crud.updatebyid(user);
         }
 
-        public UserTable getbyid(int id)
+        public usertable getbyid(int id)
         {
-            return crud.getbyid<UserTable>(id);
+            return crud.getbyid<usertable>(id);
 
         }
 
         public bool deletebyid(int id)
         {
 
-            return crud.deletebyid<UserTable>(id);
+            return crud.deletebyid<usertable>(id);
         }
 
 

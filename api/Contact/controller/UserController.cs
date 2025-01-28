@@ -3,13 +3,14 @@ using Contact.model;
 using Contact.model.table;
 using Contact.model.User;
 using Contact.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contact.controller
 {
     [ApiController]
     [Route("user")]
-    public class UserController
+    public class UserController: ControllerBase
     {
         private UserBusiness userbusiness;
 
@@ -55,10 +56,14 @@ namespace Contact.controller
 
         }
         //user profile
+        [Authorize]
         [HttpGet("profile")]
-          public BusinessResult<UserProfilemodel> profile(int userid)
+          public BusinessResult<UserProfilemodel> profile()
         {
-            return this.userbusiness.profileBusiness(userid);
+
+            string userid = base.User.Identity.Name;
+
+            return this.userbusiness.profileBusiness(int.Parse(userid));
 
         }
         [HttpGet("time")]

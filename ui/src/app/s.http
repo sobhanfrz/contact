@@ -6,3 +6,5 @@ Content-Type: application/json
     "username": "sami",
     "password": "112288"
 }
+GET https://localhost:50879/user/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjQwMTQiLCJuYmYiOjE3Mzc2Mjk2NTUsImV4cCI6MjUzNDAyMjg4MjAwLCJpYXQiOjE3Mzc2Mjk2NTV9.Q8AY5tYhMzNLK_Nv8el0HZPim3AxD0-iJ7yqOqTMcNM

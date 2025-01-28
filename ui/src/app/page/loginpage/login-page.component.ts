@@ -14,11 +14,15 @@ styleUrl:'login-page.component.css'
 export class LoginPageComponent{
     constructor(private userservice:userservice,private router:Router){}
 loginform = new FormGroup({
-    username:new FormControl('',Validators.required),
-    password:new FormControl('')
+    username:new FormControl('', [Validators.required]),
+    password:new FormControl('', [Validators.required])
 })
 login()
 { 
+    if (this.loginform.invalid) {
+        alert('لطفاً تمام فیلدها را پر کنید.');
+        return;
+    }
 let request : userloginmodel = {
 username:this.loginform.value.username as string ,
 password:this.loginform.value.password as string

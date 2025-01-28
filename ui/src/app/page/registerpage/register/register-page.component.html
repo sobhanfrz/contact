@@ -1,7 +1,7 @@
 <form [formGroup]="registerform" (ngSubmit)="register()">
 <input type="text" formControlName="username"  placeholder="نام کاربری:" autofocus required dir="rtl" >
 <input type="text" formControlName="fullname" placeholder="نام" required dir="rtl">
-<input type="password" formControlName="password" placeholder="رمز عبور" required dir="rtl">
+<input type="password" formControlName="password" placeholder="رمز عبور:" required dir="rtl">
 <input type="file" formControlName="imagedata" (change)="show($event)">
 <img [src] ="url">
 <input type="submit" value="register">

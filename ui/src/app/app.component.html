@@ -1,4 +1,63 @@
-<a routerLink="login">login</a>|
-<a routerLink="profile">profile</a>|
-<a routerLink="register">register</a>
-<router-outlet></router-outlet>
+<style>
+    /* استایل کلی منو */
+    .menu {
+      background-color: #333; /* رنگ پس‌زمینه منو */
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  
+    /* استایل لینک‌های اصلی */
+    .menu > a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  
+    /* زیرمنو */
+    .submenu {
+      display: none; /* مخفی‌کردن زیرمنو */
+      position: absolute;
+      background-color: #444;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  
+    /* لینک‌های زیرمنو */
+    .submenu a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      display: block;
+      font-weight: normal;
+    }
+  
+    /* نمایش زیرمنو هنگام هاور */
+    .menu:hover .submenu {
+      display: block;
+    }
+  
+    /* تغییر رنگ لینک‌ها هنگام هاور */
+    .menu a:hover {
+      background-color: #555;
+    }
+    .submenu a:hover {
+      background-color: #666;
+    }
+  </style>
+  
+  <div class="menu">
+    <a href="#">Menu</a>
+    <div class="submenu">
+      <a routerLink="login">Login</a>
+      <a routerLink="profile">Profile</a>
+      <a routerLink="register">Register</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  

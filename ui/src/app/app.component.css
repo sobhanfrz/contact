@@ -1,0 +1,6 @@
+:host {
+    display: block;
+    background-color: #00BB8C;
+    height: 100vh; /* تمام ارتفاع صفحه */
+    margin: 0;
+  }

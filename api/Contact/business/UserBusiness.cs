@@ -44,7 +44,7 @@ namespace Contact.business
 
             File.WriteAllBytes(file, avatar);
 
-            UserTable user = new UserTable
+            usertable user = new usertable
             {
                 username = model.username,
                 password = password,
@@ -83,7 +83,7 @@ namespace Contact.business
         public BusinessResult<UserProfilemodel> profileBusiness(int userid)
         {
 
-            UserTable table = this.userData.getuserinfobyid(userid);
+            usertable table = this.userData.getuserinfobyid(userid);
             string file = @$".\Avatar\{table.username.ToLower()}.jpg";
             string data = "data: image / jpeg; base64,";
 

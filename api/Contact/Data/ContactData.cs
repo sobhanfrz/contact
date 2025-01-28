@@ -21,6 +21,22 @@ namespace Contact.Data
             return this.crud.select<PhonetypeTable>();
 
         }
+        public void AddContactData(contacttable contact)
+        {
+            this.crud.insert(contact);
+        }
+        public IEnumerable<contacttable> getcontactdata(int userid)
+        {
+
+            return this.crud.select<contacttable>();
+        }
+        //هم میگذاریم که چک کنیم آیا این userid
+        //مربوط به همین یوزر ای دی باشد  id
+        public void removecontactdata(int contactid,int userid)
+        {
+            this.crud.deletebyid<contacttable>(contactid);
+        }
+
 
     }
 }

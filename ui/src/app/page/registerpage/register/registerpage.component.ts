@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { userservice } from "../../../service/user-service";
 import { Route, Router } from "@angular/router";
 import { useraddmodel } from "../../../model/user-add-model";
@@ -16,9 +16,9 @@ export class registerPageComponent{
     url="";
     registerform=new FormGroup(
 {
-    username:new FormControl(''),
-    fullname:new FormControl(''),
-    password:new FormControl(''),
+    username:new FormControl('',Validators.required),
+    fullname:new FormControl('',Validators.required),
+    password:new FormControl('',Validators.required),
     imagedata:new FormControl('')
 } )
 
@@ -39,6 +39,11 @@ show(event:any) {
 
 register()
 {
+    if (this.registerform.invalid) {
+        this.markAllAsTouched(); // لمس همه فیلدها برای نمایش پیام‌های خطا
+        alert('لطفاً همه فیلدها را به‌طور کامل تکمیل کنید.'); // پیام به کاربر
+        return;
+      }
 let request:useraddmodel= {
 
 username:this.registerform.value.username as string,
@@ -59,7 +64,14 @@ else
 
 }
 
+
 )
+
+}
+private markAllAsTouched() {
+    Object.values(this.registerform.controls).forEach((control) => {
+      control.markAsTouched();
+    });
 }
 
 }

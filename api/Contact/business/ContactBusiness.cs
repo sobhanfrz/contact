@@ -20,5 +20,18 @@ result.Success = true;
 
 
         }
+    
+    public BusinessResult<bool> removecontactbusiness(int contactid, int userid)
+        {
+           this.data.removecontactdata(contactid,userid);
+
+            return new()
+            {
+                Success = true,
+                Data = true
+            };
+        }
+    
+    
     }
 }

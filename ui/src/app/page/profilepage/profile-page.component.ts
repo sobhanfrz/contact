@@ -13,8 +13,8 @@ username="";
 fullname="";
 avatar="";
     ngOnInit() {
-        let userid=sessionStorage.getItem("userid");
-        this.userservice.getprofile(userid).subscribe((response)=>
+    
+        this.userservice.getprofile().subscribe((response)=>
         
         {
         this.username=response.data.username;

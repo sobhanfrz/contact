@@ -16,8 +16,14 @@ postRegister(request:useraddmodel){
   let url="https://localhost:50879/user/add"
 return this.http.post<result<number>>(url,request)
 }
-getprofile(userid:any){
-  let url=`https://localhost:50879/user/profile?userid=${userid}`;
-return this.http.get<result<userprofilemodel>>(url)
+getprofile(){
+  let jwt=sessionStorage.getItem('jwt');
+  let url=`https://localhost:50879/user/profile`;
+return this.http.get<result<userprofilemodel>>(url,{
+  //headerتعریف 
+  headers:{
+    "Authorization": `Bearer ${jwt}`
+  }
+})
 }
 }
